@@ -4,6 +4,7 @@
     --cl-blue: #ed145b;
     --cl-green: #73be48;
 }
+
 .container {
     width: 100%;
     margin-right: auto;
@@ -11,6 +12,101 @@
     padding-right: 15px;
     padding-left: 15px;
 }
+
+html, body {
+    font-family: "Nunito";
+}
+.font-bubblegum-sans {
+    font-family: "Bubblegum Sans";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Jost";
+}
+
+.knowledge__btn {
+    transition: all 0.5s ease-in-out;
+    border: 2px solid #ed145b;   
+    
+}
+
+.animal {
+    animation: animalMove linear 2s infinite;
+    max-width: 100%;
+}
+
+.blog__note h3,
+.blog__note span {
+    transition: all 0.5s;
+}
+
+.blog__note h3:hover,
+.blog__note a:hover span {
+    color:#1cbbb4;
+    
+}
+
+.blog__item:last-child {
+    display: grid;
+    grid-template-columns: 1 / span 2 ;
+}
+
+.bottom__background {
+    background-image: url(../images/egg-shap.png);    
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: left-to-right 2s linear infinite ;
+    
+}
+
+
+.ascent__connected {
+    background-image: url(../images/bg-img.png), linear-gradient(180deg, rgba(238, 255, 200, 0.00) 0%, #E9FFB6 100%);;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;    
+}
+
+.ascent__connected .btn::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: #1cbbb4;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+    border-radius: 6px;
+}
+
+.ascent__connected .btn:hover::after {
+    width: 100%;
+}
+
+.cd-top--is-visible { 
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+  
+
+@keyframes animalMove {
+    50% {
+        transform: translateX(14px);
+    }
+}
+
+@keyframes left-to-right {
+    50% {
+        transform: translateX(14px);
+    }
+}
+
+
+
 
 @media (min-width: 640px) {
     .container {
